@@ -1,6 +1,6 @@
 $(document).ready(function () {
     /* Basis-URL für alles XMLHttpRequest-Aufrufe */
-    let baseURL = "http://nowaunoweb.azurewebsites.net";
+    let baseURL = "https://nowaunoweb.azurewebsites.net";
 
     /* Map zwischen Farbe der Karte und Bootstrap-Class */
     let colorMap = {

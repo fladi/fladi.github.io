@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+
+  <title>UNO - NOWA 2018</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand mr-auto" href="#">UNO NOWA 2018</a>
+    <span class="navbar-text" id="currentPlayer"></span>
+  </nav>
+
+  <div class="container invisible" id="board">
+    <div class="row">
+      <div class="col-3" id="playerList">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title text-center">Aufgedeckt</h5>
+            <p class="card-text" id="topCard"></p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title text-center">Stapel</h5>
+            <p class="card-text" id="topCard">
+              <button type="button" id="draw" class="btn btn-outline-dark btn-lg btn-block">Abheben</button>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="playerNames" tabindex="-1" role="dialog" aria-labelledby="playerNamesTitle" aria-hidden="true"
+    data-backdrop="static" data-keyboard="false">
+    <form id="playerNamesForm">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="playerNamesTitle">Spielernamen</h5>
+          </div>
+          <div class="modal-body">
+
+            <div class="form-group">
+              <input type="text" class="form-control" id="playerName1" aria-describedby="emailHelp" placeholder="Name für Spieler 1 eingeben">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="playerName2" aria-describedby="emailHelp" placeholder="Name für Spieler 2 eingeben">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="playerName3" aria-describedby="emailHelp" placeholder="Name für Spieler 3 eingeben">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="playerName4" aria-describedby="emailHelp" placeholder="Name für Spieler 4 eingeben">
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary" id="playerNamesSubmit" disabled="disabled">Spiel starten</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="modal fade" id="colorPicker" tabindex="-1" role="dialog" aria-labelledby="colorPickerTitle" aria-hidden="true"
+    data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="colorPickerTitle">Spielernamen</h5>
+        </div>
+        <div class="modal-body">
+          <button type="button" class="btn btn-danger btn-block" data-color="Red">Rot</button>
+          <button type="button" class="btn btn-success btn-block" data-color="Green">Grün</button>
+          <button type="button" class="btn btn-primary btn-block" data-color="Blue">Blau</button>
+          <button type="button" class="btn btn-warning btn-block" data-color="Yellow">Gelb</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script id="tmplCard" type="text/html">
+    <div class="card text-white">
+      <div class="card-body">
+        <h5 class="card-title text-center"></h5>
+        <h6 class="card-subtitle mb-2 text-center"></h6>
+      </div>
+    </div>
+  </script>
+  <script id="tmplPlayer" type="text/html">
+    <div class="col card">
+      <div class="card-body">
+        <h5 class="card-title text-center"></h5>
+        <h6 class="card-subtitle mb-2 text-muted text-center points"></h6>
+        <p class="card-text deck"></p>
+      </div>
+    </div>
+  </script>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <script src="game.js"></script>
+</body>
+
+</html>
